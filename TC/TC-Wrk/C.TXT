@@ -1,0 +1,9 @@
+TL 800-382-3455
+
+gas 6.15
+Diesel 7.1
+Water 8.3
+Propane 4.25
+
+lbs/gal
+

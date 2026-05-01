@@ -1,0 +1,11 @@
+as
+at
+be
+by
+he
+is
+it
+of
+on
+or
+to

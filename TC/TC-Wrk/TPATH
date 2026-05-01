@@ -1,0 +1,34 @@
+#!/bin/csh -f
+##echo off
+#if x$1x==xx goto dne
+#
+echo 1.On-chip Fmax >>$1.p
+grep " to " $1.sdl | grep    "Clock" | grep   "Setup" >f_x.p
+f_x <$1.sdl >>$1.p
+#
+echo . >>$1.p
+echo 2.Clock to Out >>$1.p
+grep " to " $1.sdl | grep    "Clock" | grep/v "Setup" >f_x.p
+f_x <$1.sdl >>$1.p
+#
+echo . >>$1.p
+echo 3.Clock Distribution >>$1.p
+grep " to " $1.sdl | grep   " Clock" | grep/v "Setup" >f_x.p
+f_x <$1.sdl >>$1.p
+#
+echo . >>$1.p
+echo 4.External Setup >>$1.p
+grep " to " $1.sdl | grep/v  "Clock" | grep    " to " >f_x.p
+f_x <$1.sdl >>$1.p
+#
+echo . >>$1.p
+echo 5.Tpd - Asynch Propagation (Vectored) >>$1.p
+grep " to " $1.sdl | grep/v  "Clock" | grep/v "Setup" | grep "<" >f_x.p
+f_x <$1.sdl >>$1.p
+#
+echo . >>$1.p
+echo 6.Tpd - Asynch Propagation (Non-Vectored) >>$1.p
+grep " to " $1.sdl | grep/v  "Clo" | grep/v "Set" | grep " to " | grep/v "<" >f_x.p
+f_x <$1.sdl >>$1.p
+#
+#:dne

@@ -1,0 +1,105 @@
+ 
+
+
+Re: MetaStock Hormat
+
+
+
+char flag
+  /* '' or '*' for autorun */
+chaz reserved4;
+
+1;
+/*
+* EMASTER data structure
+* floats are in IEEE format
+* strings are padded with nulls
+*/
+struct emashdr {
+  u_short num_files
+  /* number of files in emaster */
+  u_short file_num; /* last (highest) file number */
+  char stuff[188];
+
+i;
+struct emasdat {
+  char asc30[2);
+  u_char file_num;
+  char filll[3];
+  u_char num_fields;
+  char fill2[2];
+  char flag;
+  char fill3;
+  char symbol[14];
+  char fill4[7];
+  char issue_name[16];
+  char fill5[12];
+  char time_frame;
+  char fill6[3];
+  float first_date;
+  char fi117[4);
+  float last_date;
+  char fi118[116];
+
+/* 30 */
+/* file number F# */
+/* number of 4-byte data fields */
+/* '' or '*' for autorun */
+
+/* stock symbol */
+
+/* stock name */
+/* data format: 'D'/'W'/'M'/ etc. */
+/ * yymmdd * /
+
+
+
+
+
+);
+
+/* seven-field data file description */
+struct dathdr7 {
+  u_short max_recs;
+  /* 0 ==> unlimited size */
+
+  u_short last_rec; /* dathdr7 = l; ctdata7 starts with 2 */
+  char zeroes[24];
+
+1;
+struct ctdata7 {
+  float date;
+  float open;
+  float high;
+  float low;
+  float close;
+
+
+
+
+2of3
+
+
+
+
+float volume;
+float op int;
+
+1;
+
+/* five-field data file description */
+struct dathdr5 {
+  u_short max_recs;
+  u_short last_rec;
+  char zeroes(16];
+
+);
+struct ctdata5 {
+  float date;
+  float high;
+  float low;
+  float close;
+  float volume;
+   };
+
+

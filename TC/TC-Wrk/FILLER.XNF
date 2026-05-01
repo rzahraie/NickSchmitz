@@ -1,0 +1,533 @@
+LCANET, 5
+PROG, Metamor, 3.0.0 , "filler at 12:21 on 9/11/1997"
+SYM, x2/f<1>, OR, LIBVER=2.0.0
+PIN, I0, I, n1k,
+PIN, I1, I, n1j,
+PIN, O, O, x2/f<1>,
+END
+SYM, x2/f<0>, OR, LIBVER=2.0.0
+PIN, I0, I, n1l,
+PIN, I1, I, n2p,
+PIN, O, O, x2/f<0>,
+END
+SYM, x3/f1, OR, LIBVER=2.0.0
+PIN, I0, I, n1i,
+PIN, I1, I, n2k,
+PIN, O, O, x3/f1,
+END
+SYM, n0m, OR, LIBVER=2.0.0
+PIN, I0, I, n2f,
+PIN, I1, I, n2e,
+PIN, I2, I, n2d,
+PIN, O, O, n0m,
+END
+SYM, n0n, OR, LIBVER=2.0.0
+PIN, I0, I, n3c,
+PIN, I1, I, n3b,
+PIN, I2, I, n3a,
+PIN, I3, I, n2z,
+PIN, O, O, n0n,
+END
+SYM, n0o, OR, LIBVER=2.0.0
+PIN, I0, I, n2y,
+PIN, I1, I, n2x,
+PIN, I2, I, n2w,
+PIN, I3, I, n2v,
+PIN, O, O, n0o,
+END
+SYM, n0p, OR, LIBVER=2.0.0
+PIN, I0, I, n0u, ,INV
+PIN, I1, I, n0t, ,INV
+PIN, I2, I, x3/f1, ,INV
+PIN, O, O, n0p,
+END
+SYM, n0q, OR, LIBVER=2.0.0
+PIN, I0, I, n2c,
+PIN, I1, I, n2b,
+PIN, I2, I, n2a,
+PIN, I3, I, n1z,
+PIN, O, O, n0q,
+END
+SYM, n0r, OR, LIBVER=2.0.0
+PIN, I0, I, n1y,
+PIN, I1, I, n1x,
+PIN, O, O, n0r,
+END
+SYM, n0s, XOR, LIBVER=2.0.0
+PIN, I0, I, x3/f1,
+PIN, I1, I, n0t,
+PIN, O, O, n0s,
+END
+SYM, n0t, XOR, LIBVER=2.0.0
+PIN, I0, I, x4_s_t<0>,
+PIN, I1, I, x1_q_t<0>,
+PIN, O, O, n0t,
+END
+SYM, n0u, OR, LIBVER=2.0.0
+PIN, I0, I, n0x,
+PIN, I1, I, n2g,
+PIN, O, O, n0u,
+END
+SYM, n0v, OR, LIBVER=2.0.0
+PIN, I0, I, n3i,
+PIN, I1, I, n3h,
+PIN, I2, I, n3g,
+PIN, O, O, n0v,
+END
+SYM, n0w, OR, LIBVER=2.0.0
+PIN, I0, I, n3f,
+PIN, I1, I, n3e,
+PIN, I2, I, n3d,
+PIN, O, O, n0w,
+END
+SYM, n0x, OR, LIBVER=2.0.0
+PIN, I0, I, n2j,
+PIN, I1, I, n2i,
+PIN, O, O, n0x,
+END
+SYM, n0y, OR, LIBVER=2.0.0
+PIN, I0, I, n2h,
+PIN, I1, I, n0v, ,INV
+PIN, O, O, n0y,
+END
+SYM, n0z, OR, LIBVER=2.0.0
+PIN, I0, I, n1w,
+PIN, I1, I, n1v,
+PIN, I2, I, n1u,
+PIN, O, O, n0z,
+END
+SYM, n1a, OR, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<0>, ,INV
+PIN, I1, I, x1_q_t<1>, ,INV
+PIN, I2, I, x1_q_t<2>, ,INV
+PIN, O, O, n1a,
+END
+SYM, n1b, OR, LIBVER=2.0.0
+PIN, I0, I, n1t,
+PIN, I1, I, n1s,
+PIN, O, O, n1b,
+END
+SYM, n1c, OR, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<2>,
+PIN, I1, I, n2s,
+PIN, O, O, n1c,
+END
+SYM, n1d, OR, LIBVER=2.0.0
+PIN, I0, I, n1p,
+PIN, I1, I, n1o,
+PIN, O, O, n1d,
+END
+SYM, n1e, OR, LIBVER=2.0.0
+PIN, I0, I, n1r,
+PIN, I1, I, n1q,
+PIN, O, O, n1e,
+END
+SYM, n1f, OR, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<0>,
+PIN, I1, I, x1_q_t<1>,
+PIN, O, O, n1f,
+END
+SYM, n1g, OR, LIBVER=2.0.0
+PIN, I0, I, n1n,
+PIN, I1, I, n1m,
+PIN, O, O, n1g,
+END
+SYM, n1h, OR, LIBVER=2.0.0
+PIN, I0, I, n2o,
+PIN, I1, I, n2n,
+PIN, O, O, n1h,
+END
+SYM, n1i, OR, LIBVER=2.0.0
+PIN, I0, I, n2m,
+PIN, I1, I, n2l,
+PIN, O, O, n1i,
+END
+SYM, n1j, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>,
+PIN, I1, I, x1_q_t<2>,
+PIN, I2, I, x1_q_t<1>,
+PIN, I3, I, x1_q_t<0>,
+PIN, O, O, n1j,
+END
+SYM, n1k, OR, LIBVER=2.0.0
+PIN, I0, I, n2u,
+PIN, I1, I, n2t,
+PIN, O, O, n1k,
+END
+SYM, n1l, OR, LIBVER=2.0.0
+PIN, I0, I, n2r,
+PIN, I1, I, n2q,
+PIN, O, O, n1l,
+END
+SYM, n1m, AND, LIBVER=2.0.0
+PIN, I0, I, n3k, ,INV
+PIN, I1, I, x1_q_t<0>, ,INV
+PIN, O, O, n1m,
+END
+SYM, n1n, AND, LIBVER=2.0.0
+PIN, I0, I, n3k,
+PIN, I1, I, n3p,
+PIN, O, O, n1n,
+END
+SYM, n1o, AND, LIBVER=2.0.0
+PIN, I0, I, n1e,
+PIN, I1, I, n1f,
+PIN, O, O, n1o,
+END
+SYM, n1p, AND, LIBVER=2.0.0
+PIN, I0, I, n3k,
+PIN, I1, I, n3o,
+PIN, O, O, n1p,
+END
+SYM, n1q, AND, LIBVER=2.0.0
+PIN, I0, I, n3k, ,INV
+PIN, I1, I, x1_q_t<0>, ,INV
+PIN, O, O, n1q,
+END
+SYM, n1r, AND, LIBVER=2.0.0
+PIN, I0, I, n3k, ,INV
+PIN, I1, I, x1_q_t<1>, ,INV
+PIN, O, O, n1r,
+END
+SYM, n1s, AND, LIBVER=2.0.0
+PIN, I0, I, n3k, ,INV
+PIN, I1, I, n1a,
+PIN, I2, I, n1c,
+PIN, O, O, n1s,
+END
+SYM, n1t, AND, LIBVER=2.0.0
+PIN, I0, I, n3k,
+PIN, I1, I, n3n,
+PIN, O, O, n1t,
+END
+SYM, n1u, AND, LIBVER=2.0.0
+PIN, I0, I, n3k, ,INV
+PIN, I1, I, x1_q_t<3>, ,INV
+PIN, I2, I, n1a, ,INV
+PIN, O, O, n1u,
+END
+SYM, n1v, AND, LIBVER=2.0.0
+PIN, I0, I, n3k, ,INV
+PIN, I1, I, x1_q_t<3>,
+PIN, I2, I, n1a,
+PIN, O, O, n1v,
+END
+SYM, n1w, AND, LIBVER=2.0.0
+PIN, I0, I, n3k,
+PIN, I1, I, n3m,
+PIN, O, O, n1w,
+END
+SYM, n1x, AND, LIBVER=2.0.0
+PIN, I0, I, x3/f1,
+PIN, I1, I, n0p,
+PIN, I2, I, n0t,
+PIN, O, O, n1x,
+END
+SYM, n1y, AND, LIBVER=2.0.0
+PIN, I0, I, n0p,
+PIN, I1, I, n0u,
+PIN, O, O, n1y,
+END
+SYM, n1z, AND, LIBVER=2.0.0
+PIN, I0, I, x3/f1,
+PIN, I1, I, n0n, ,INV
+PIN, I2, I, n0t,
+PIN, I3, I, n0u,
+PIN, O, O, n1z,
+END
+SYM, n2a, AND, LIBVER=2.0.0
+PIN, I0, I, n0n,
+PIN, I1, I, n0u, ,INV
+PIN, O, O, n2a,
+END
+SYM, n2b, AND, LIBVER=2.0.0
+PIN, I0, I, n0n,
+PIN, I1, I, n0t, ,INV
+PIN, O, O, n2b,
+END
+SYM, n2c, AND, LIBVER=2.0.0
+PIN, I0, I, x3/f1, ,INV
+PIN, I1, I, n0n,
+PIN, O, O, n2c,
+END
+SYM, n2d, AND, LIBVER=2.0.0
+PIN, I0, I, n0n,
+PIN, I1, I, n0o, ,INV
+PIN, I2, I, n0p, ,INV
+PIN, O, O, n2d,
+END
+SYM, n2e, AND, LIBVER=2.0.0
+PIN, I0, I, n0o,
+PIN, I1, I, n0p,
+PIN, O, O, n2e,
+END
+SYM, n2f, AND, LIBVER=2.0.0
+PIN, I0, I, n0n, ,INV
+PIN, I1, I, n0o,
+PIN, O, O, n2f,
+END
+SYM, n2g, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<0>,
+PIN, I1, I, x4_s_t<0>,
+PIN, I2, I, n0y,
+PIN, O, O, n2g,
+END
+SYM, n2h, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<1>,
+PIN, I1, I, x4_s_t<1>,
+PIN, O, O, n2h,
+END
+SYM, n2i, AND, LIBVER=2.0.0
+PIN, I0, I, x4_s_t<1>,
+PIN, I1, I, n0v, ,INV
+PIN, O, O, n2i,
+END
+SYM, n2j, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<1>,
+PIN, I1, I, n0v, ,INV
+PIN, O, O, n2j,
+END
+SYM, n2k, AND, LIBVER=2.0.0
+PIN, I0, I, x2/f<1>,
+PIN, I1, I, n1h,
+PIN, O, O, n2k,
+END
+SYM, n2l, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<0>,
+PIN, I1, I, x2/f<1>, ,INV
+PIN, I2, I, x2/f<0>, ,INV
+PIN, O, O, n2l,
+END
+SYM, n2m, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<1>,
+PIN, I1, I, x2/f<1>, ,INV
+PIN, I2, I, x2/f<0>,
+PIN, O, O, n2m,
+END
+SYM, n2n, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<2>,
+PIN, I1, I, x2/f<0>, ,INV
+PIN, O, O, n2n,
+END
+SYM, n2o, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>,
+PIN, I1, I, x2/f<0>,
+PIN, O, O, n2o,
+END
+SYM, n2p, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>,
+PIN, I1, I, n1c,
+PIN, I2, I, n1f, ,INV
+PIN, O, O, n2p,
+END
+SYM, n2q, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>, ,INV
+PIN, I1, I, x1_q_t<1>,
+PIN, I2, I, n1c, ,INV
+PIN, O, O, n2q,
+END
+SYM, n2r, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>, ,INV
+PIN, I1, I, n1a, ,INV
+PIN, O, O, n2r,
+END
+SYM, n2s, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<1>,
+PIN, I1, I, x1_q_t<0>,
+PIN, O, O, n2s,
+END
+SYM, n2t, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>, ,INV
+PIN, I1, I, x1_q_t<2>, ,INV
+PIN, I2, I, x1_q_t<1>, ,INV
+PIN, I3, I, x1_q_t<0>, ,INV
+PIN, O, O, n2t,
+END
+SYM, n2u, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>, ,INV
+PIN, I1, I, x1_q_t<2>,
+PIN, I2, I, x1_q_t<1>, ,INV
+PIN, I3, I, x1_q_t<0>,
+PIN, O, O, n2u,
+END
+SYM, n2v, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>,
+PIN, I1, I, x4_s_t<3>, ,INV
+PIN, I2, I, n0w, ,INV
+PIN, O, O, n2v,
+END
+SYM, n2w, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>, ,INV
+PIN, I1, I, x4_s_t<3>,
+PIN, I2, I, n0w, ,INV
+PIN, O, O, n2w,
+END
+SYM, n2x, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>, ,INV
+PIN, I1, I, x4_s_t<3>, ,INV
+PIN, I2, I, n0w,
+PIN, O, O, n2x,
+END
+SYM, n2y, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<3>,
+PIN, I1, I, x4_s_t<3>,
+PIN, I2, I, n0w,
+PIN, O, O, n2y,
+END
+SYM, n2z, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<2>,
+PIN, I1, I, x4_s_t<2>,
+PIN, I2, I, n0v,
+PIN, O, O, n2z,
+END
+SYM, n3a, AND, LIBVER=2.0.0
+PIN, I0, I, n0v,
+PIN, I1, I, n0w, ,INV
+PIN, O, O, n3a,
+END
+SYM, n3b, AND, LIBVER=2.0.0
+PIN, I0, I, x4_s_t<2>,
+PIN, I1, I, n0w, ,INV
+PIN, O, O, n3b,
+END
+SYM, n3c, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<2>,
+PIN, I1, I, n0w, ,INV
+PIN, O, O, n3c,
+END
+SYM, n3d, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<2>,
+PIN, I1, I, n0v,
+PIN, O, O, n3d,
+END
+SYM, n3e, AND, LIBVER=2.0.0
+PIN, I0, I, x4_s_t<2>,
+PIN, I1, I, n0v,
+PIN, O, O, n3e,
+END
+SYM, n3f, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<2>,
+PIN, I1, I, x4_s_t<2>,
+PIN, O, O, n3f,
+END
+SYM, n3g, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<0>,
+PIN, I1, I, x4_s_t<1>,
+PIN, I2, I, x4_s_t<0>,
+PIN, O, O, n3g,
+END
+SYM, n3h, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<1>,
+PIN, I1, I, x1_q_t<0>,
+PIN, I2, I, x4_s_t<0>,
+PIN, O, O, n3h,
+END
+SYM, n3i, AND, LIBVER=2.0.0
+PIN, I0, I, x1_q_t<1>,
+PIN, I1, I, x4_s_t<1>,
+PIN, O, O, n3i,
+END
+SYM, x4_s_t<3>, DFF, INIT=R, =HDL_SOURCE="filler.vhd : 108", LIBVER=2.0.0
+PIN, C, I, n3l,
+PIN, D, I, n0m,
+PIN, CLR, I, n3j,
+PIN, Q, O, x4_s_t<3>,
+END
+SYM, x4_s_t<2>, DFF, INIT=R, =HDL_SOURCE="filler.vhd : 108", LIBVER=2.0.0
+PIN, C, I, n3l,
+PIN, D, I, n0q,
+PIN, CLR, I, n3j,
+PIN, Q, O, x4_s_t<2>,
+END
+SYM, x4_s_t<1>, DFF, INIT=R, =HDL_SOURCE="filler.vhd : 108", LIBVER=2.0.0
+PIN, C, I, n3l,
+PIN, D, I, n0r,
+PIN, CLR, I, n3j,
+PIN, Q, O, x4_s_t<1>,
+END
+SYM, x4_s_t<0>, DFF, INIT=R, =HDL_SOURCE="filler.vhd : 108", LIBVER=2.0.0
+PIN, C, I, n3l,
+PIN, D, I, n0s,
+PIN, CLR, I, n3j,
+PIN, Q, O, x4_s_t<0>,
+END
+SYM, x1_q_t<3>, DFF, INIT=R, =HDL_SOURCE="filler.vhd : 22", LIBVER=2.0.0
+PIN, C, I, n3l,
+PIN, D, I, n0z,
+PIN, CLR, I, n3j,
+PIN, Q, O, x1_q_t<3>,
+END
+SYM, x1_q_t<2>, DFF, INIT=R, =HDL_SOURCE="filler.vhd : 22", LIBVER=2.0.0
+PIN, C, I, n3l,
+PIN, D, I, n1b,
+PIN, CLR, I, n3j,
+PIN, Q, O, x1_q_t<2>,
+END
+SYM, x1_q_t<1>, DFF, INIT=R, =HDL_SOURCE="filler.vhd : 22", LIBVER=2.0.0
+PIN, C, I, n3l,
+PIN, D, I, n1d,
+PIN, CLR, I, n3j,
+PIN, Q, O, x1_q_t<1>,
+END
+SYM, x1_q_t<0>, DFF, INIT=R, =HDL_SOURCE="filler.vhd : 22", LIBVER=2.0.0
+PIN, C, I, n3l,
+PIN, D, I, n1g,
+PIN, CLR, I, n3j,
+PIN, Q, O, x1_q_t<0>,
+END
+SYM, obuf$$s<3>, OBUF, LIBVER=2.0.0
+PIN, I, I, x4_s_t<3>,
+PIN, O, O, s<3>,
+END
+SYM, obuf$$s<2>, OBUF, LIBVER=2.0.0
+PIN, I, I, x4_s_t<2>,
+PIN, O, O, s<2>,
+END
+SYM, obuf$$s<1>, OBUF, LIBVER=2.0.0
+PIN, I, I, x4_s_t<1>,
+PIN, O, O, s<1>,
+END
+SYM, obuf$$s<0>, OBUF, LIBVER=2.0.0
+PIN, I, I, x4_s_t<0>,
+PIN, O, O, s<0>,
+END
+SYM, n3j, IBUF, LIBVER=2.0.0
+PIN, O, O, n3j,
+PIN, I, I, rd,
+END
+SYM, n3k, IBUF, LIBVER=2.0.0
+PIN, O, O, n3k,
+PIN, I, I, ld,
+END
+SYM, n3l, BUFG, LIBVER=2.0.0
+PIN, I, I, clk,
+PIN, O, O, n3l,
+END
+SYM, n3m, IBUF, LIBVER=2.0.0
+PIN, O, O, n3m,
+PIN, I, I, d<3>,
+END
+SYM, n3n, IBUF, LIBVER=2.0.0
+PIN, O, O, n3n,
+PIN, I, I, d<2>,
+END
+SYM, n3o, IBUF, LIBVER=2.0.0
+PIN, O, O, n3o,
+PIN, I, I, d<1>,
+END
+SYM, n3p, IBUF, LIBVER=2.0.0
+PIN, O, O, n3p,
+PIN, I, I, d<0>,
+END
+EXT, s<3>, O, 
+EXT, s<2>, O, 
+EXT, s<1>, O, 
+EXT, s<0>, O, 
+EXT, rd, I, 
+EXT, ld, I, 
+EXT, clk, I, 
+EXT, d<3>, I, 
+EXT, d<2>, I, 
+EXT, d<1>, I, 
+EXT, d<0>, I, 
+EOF

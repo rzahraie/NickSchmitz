@@ -1,0 +1,73 @@
+news://139.95.250.1/4j...(intrepid.intrepid.com news://139.95.250.1/4j...intrepid.intrepid.com
+
+
+     Subject: Re: Calculation of Volatility
+     Date:1 Apr 1996 23:12:45 -0800
+     From: gary aintrepid.intrepid.com (Gary Funck)
+     Organization: Intrepid Technology Inc.
+     Newsgroups: misc.invest.technical
+     References: <4jpman$lakanewsbfi72.news.aol.com>
+
+
+
+     Frischholz (frischholz@aol.com) wrote:
+     . I encountered a problem I did not expect: I always thought that volatility
+     . is pretty much the same as the mathematical standard deviation. Comparing
+     . the results you find it is not so. Does anyone have a formula, how the
+     . volatiliy of stocks or options is calculated ?
+
+     Gerhard, the volatility you mention above is calculated in a number
+     of different ways. The conventional method is to calculate the
+     standard deviation of daily lognormal returns, expressed as an
+     annualized percentage:
+
+     Given a sample of closing prices O..N, first calculate the
+     daily log returns:
+
+
+     float
+     historic_volatility(vec, np)
+         float_vec vec;
+         int np;
+
+         float sum, sum_return, sum_sq_return;
+         float daily_log_return, hist_vol;
+         int i;
+         /* compute historic volatility */
+         sum = 0.0;
+         sum_return = 0.0;
+         sum_sq_return = 0.0;
+         for (i = 1; i < np; ++i) {
+            sum += vec(i];
+            daily log return = log(vec[i] / vec[i - 1]);
+            sum return += daily_iog_return;
+            sum sq return += (daily log return * daily log return);
+         )
+         hist_vol = sqrt((sum_sq_return
+                        - (sum_return * sum_return) / (np - 1))
+                       / (np - 2)5 * sqrt(260.05 * 100.0;
+         hist_vol = max(hist_vol, 1.0);
+         return hist vol;
+
+
+     above, 260.0 is an approximation for the number of trading days
+     in the year. The value of 'np' is the number of points in the
+     price vector, 'vec'. N+1 points are required to calculate an
+     N-day volatility measure.
+
+     Various experts debate the proper number of days to use in arriving
+     at a reasonable measure of current volatility, 20 seems a populaz
+     number. Others debate on whether the actual number of days in a
+     year should be used, instead of the number of trading days. Finally,
+     there are other methods, known as "extreme value" calculations that
+     take into account daily hiqhs and lows, instead of just looking at
+     closing prices. All these methods are approximations on the market's
+     actual volatility, which is an important input in pricing models.
+
+
+
+
+
+1 of 2                                                              04/02/96 17:26:24
+
+

@@ -1,0 +1,51 @@
+Re: MetaStock Format
+
+
+  Subject: Re: MetaStock Format
+  Date: Wed,10 Jul 1996 08:49:20 GMT
+  From: aomori(a netvoyage.net (Andy Omori)
+Organization: Netvoyage Internet Access Provider
+Newsgroups: misc.invest.technical
+
+
+Juerg Ruchti <ruchti@swissonline.ch) wrote:
+
+>Where can I find a description of MetaStock files?
+>--
+
+
+typedef unsigned char u_char;
+typedef unsigned short u short;
+
+/*
+* MASTER file description
+* floats are in Microsoft Basic format
+* strings are padded with spaces, not null terminated
+*/
+struct rec_1 {
+  ushort num_files; /* number of files master contains */
+  u_short file num; /* next file number to use (highest F#
+used) */
+  char zeroes[49];
+
+struct rec_2to129 {   /* description of data files */
+u_char file_num;      /* file #, i.e., F# */
+char filetype[2);    /* CT file type = 0'e' (5 or 7 flds) */
+uchar reclen;       /* record length in bytes (4 x num fields)
+*/
+uchar num fields;    /* number of 4-byte fields in each record
+*/
+  char reservedl[2]; /* in the data file */
+  char issue name[16); /* stock name */
+  char reserved2;
+  char CT v28flag; /* if CT ver. 2.8, 'Y'; o.w., anything
+else */
+  float first_date; /* yymmdd */
+  float last_date;
+  char time_frame; /* data format:
+'I'[IDA)/'W'/'Q'/'D/M/y */
+  u_short ida_time; /* intraday (IDA) time base */
+  char symbol[14]; /* stock symbol */
+  char reserved3; /* MetaStock reserved2: must be a space */
+
+

@@ -1,0 +1,47 @@
+) bad expression;
+xy;
+a.b;
+a+b;
+a^b;
+a.~b;
+
+~(~a.~d + ~b.~c + a.b.c.d);
+
+~a~b~c~d+
+~a~bc~d+
+~a~bcd+
+~ab~cd+
+~abc~d+
+~abcd+
+a~b~c~d+
+a~b~cd;
+
+
+0;
+1;
+a+1;
+a+0;
+a0;
+a1;
+a^0;
+a^1;
+
+a+~a;
+a~a;
+
+ab+~a~b+~ab+a~b;
+
+~s~r~q~p + ~s~rq~p + ~s~rqp + ~sr~qp + ~srq~p + ~srqp + s~r~q~p + s~r~qp;
+
+~s~r~q~p + ~s~r~qp + ~s~rq~p + ~s~rqp + ~sr~q~p + ~srqp + s~r~q~p + s~r~qp;
+
+~s~r~q~p + ~s~r~qp + ~s~rqp + ~sr~q~p + ~sr~qp  +~srq~p + ~srqp + s~r~q~p + s~r~qp;
+
+~s~r~q~p + ~s~rq~p + ~s~rqp + ~sr~qp + ~srq~p + s~r~q~p + s~r~qp;
+
+~s~r~q~p + ~s~rq~p + ~srq~p + s~r~q~p;
+
+~s~r~q~p + ~sr~q~p +  ~sr~qp + ~srq~p + s~r~q~p + s~r~qp;
+
+~s~rq~p + ~s~rqp + ~sr~q~p + ~sr~qp + ~srq~p + s~r~q~p + s~r~qp;
+

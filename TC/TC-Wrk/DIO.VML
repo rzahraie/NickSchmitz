@@ -1,0 +1,792 @@
+%LIBRARY ('dio')
+	%VERSION = "Viewlogic DIO library, Version - 3/4/93";
+	%PARAMS
+		%AREA_UNITS = 'gate_equivalents';
+		%DELAY_UNITS = 'nsecs';
+		%MAX_LOAD_CALCULATION = ON;
+		%DEFAULT_LOAD_ON_OUTPUTS = 0;
+		%DEFAULT_DRIVE_ON_INPUTS = 0 0;
+		%VOLT = 4.5 5 5.5;
+		%TEMP = -55 25 125;
+		%K_VOLT = 0 0 0 0 0 0 0 0 0 0;
+		%K_TEMP = 0 0 0 0 0 0 0 0 0 0;
+		%NOMINAL_PROCESS = 'TYPICAL';
+		%NOMINAL_DIESIZE = 'default';
+		%K_PROCESS 'TYPICAL' = 1 1 1 1 1 1 1 1 1 1;
+		%WIRE_PARAMS 'default'
+			%AREA = 0,
+			%LOAD = 1,
+			%CAPACITANCE = 1,
+			%LENGTHS = 0 0;
+	%END_PARAMS
+	%CELL_NAMES 'DIO' = 'DLATCH' 'XNOR2' 'NOR8' 'BUF' 'DFFC' 'NOT' 'DLATCHP'
+ 'RSLATCH' 'DLATCHPC' 'DFFP' 'DFFPC' 'TRST' 'DLATCHC' 'NAND2' 'NAND4' 'AND2'
+ 'AND4' 'AND8' 'OR2' 'NAND8' 'OR4' 'NOR2' 'OR8' 'XOR2' 'NOR4' 'DFF';
+%END_LIBRARY
+%CELL ('DLATCH')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'D' 'G';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%DLATCH
+			%NBITS = 1,
+			%GATE = 'G',
+			%D = 'D',
+			%Q = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'D' 'G' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'D' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'G' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = R;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('XNOR2')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B';
+	%OUTPUT_PINS = 'QN';
+	%EBC
+		%XOR
+			%BUS_WIDTH = 1,
+			%NINPUTS = 2,
+			%INPUT = 'A' 'B',
+			%Z = !'QN';
+	%END_EBC 
+	%RESOURCES
+		%AREA = 2;
+		%INPINS ( 'A' 'B' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = U;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('NOR8')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H';
+	%OUTPUT_PINS = 'QN';
+	%EBC
+		%OR
+			%BUS_WIDTH = 1,
+			%NINPUTS = 8,
+			%INPUT = 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H',
+			%Z = !'QN';
+	%END_EBC   
+	%RESOURCES
+		%AREA = 8;
+		%INPINS ( 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = I;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('BUF')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%BUFFER
+			%BUS_WIDTH = 1,
+			%INPUT = 'A',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 0;
+		%INPINS ( 'A' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = N;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('DFFC')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'CK' 'D' 'C';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%DFF
+			%NBITS = 1,
+			%CLOCK = 'CK',
+			%D = 'D',
+			%ARESET = 'C',
+			%Q = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'CK' 'D' 'C' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'CK' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = R;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'C' )
+				%PROP_DELAY %FALL = 0;
+				%PHASE = I;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('NOT')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A';
+	%OUTPUT_PINS = 'QN';
+	%EBC
+		%BUFFER
+			%BUS_WIDTH = 1,
+			%INPUT = 'A',
+			%Z = !'QN';
+	%END_EBC
+	%RESOURCES
+		%AREA = 1;
+		%INPINS ( 'A' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = I;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('DLATCHP')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'D' 'G' 'P';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%DLATCH
+			%NBITS = 1,
+			%GATE = 'G',
+			%D = 'D',
+			%SET = 'P',
+			%Q = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'D' 'G' 'P' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'D' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'G' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = R;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'P' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('RSLATCH')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'R' 'S';
+	%OUTPUT_PINS = 'Q' 'QN';
+	%EBC
+		%RSLATCH
+			%R = 'R',
+			%S = 'S',
+			%RSCLASH = HH,
+			%Q = 'Q',
+			%QN = 'QN';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'R' 'S' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'R' 'S' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = U;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'R' 'S' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = U;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('DLATCHPC')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'D' 'G' 'C' 'P';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%DLATCH
+			%NBITS = 1,
+			%GATE = 'G',
+			%D = 'D',
+			%RESET = 'C',
+			%SET = 'P',
+			%CLASH = X,
+			%Q = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'D' 'G' 'C' 'P' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'D' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'G' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = R;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'C' )
+				%PROP_DELAY %FALL = 0;
+				%PHASE = I;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'P' )
+				%PROP_DELAY %RISE = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('DFFP')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'CK' 'D' 'P';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%DFF
+			%NBITS = 1,
+			%CLOCK = 'CK',
+			%D = 'D',
+			%ASET = 'P',
+			%Q = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'CK' 'D' 'P' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'CK' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = R;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'P' )
+				%PROP_DELAY %RISE = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('DFFPC')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'CK' 'D' 'C' 'P';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%DFF
+			%NBITS = 1,
+			%CLOCK = 'CK',
+			%D = 'D',
+			%ARESET = 'C',
+			%ASET = 'P',
+			%ACLASH = X,
+			%Q = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'CK' 'D' 'C' 'P' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'CK' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = R;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'C' )
+				%PROP_DELAY %FALL = 0;
+				%PHASE = I;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'P' )
+				%PROP_DELAY %RISE = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('TRST')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'E';
+	%TRISTATE_PINS = 'Q';
+	%EBC
+		%TRISTATE
+			%BUS_WIDTH = 1,
+			%INPUT = 'A',
+			%ENABLE_IN = 'E',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 1;
+		%INPINS ( 'A' 'E' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%TRIPINS ( 'Q' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'A' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+			%ENABLE_PINS ( 'E' )
+				%PROP_DELAY = 0 0 0 0;
+				%PHASE = R;
+			%END_ENABLE_PINS
+		%END_TRIPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('DLATCHC')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'D' 'G' 'C';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%DLATCH
+			%NBITS = 1,
+			%GATE = 'G',
+			%D = 'D',
+			%RESET = 'C',
+			%Q = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'D' 'G' 'C' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'D' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = N;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'G' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = R;
+			%END_SOURCE_PINS
+			%SOURCE_PINS ( 'C' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = I;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('NAND2')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B';
+	%OUTPUT_PINS = 'QN';
+	%EBC
+		%AND
+			%NINPUTS = 2,
+			%BUS_WIDTH = 1,
+			%INPUT = 'A' 'B',
+			%Z = !'QN';
+	%END_EBC
+	%RESOURCES
+		%AREA = 2;
+		%INPINS ( 'A' 'B' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = I;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('NAND4')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B' 'C' 'D';
+	%OUTPUT_PINS = 'QN';
+	%EBC
+		%AND
+			%BUS_WIDTH = 1,
+			%NINPUTS = 4,
+			%INPUT = 'A' 'B' 'C' 'D',
+			%Z = !'QN';
+	%END_EBC
+	%RESOURCES
+		%AREA = 4;
+		%INPINS ( 'A' 'B' 'C' 'D' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = I;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('AND2')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%AND
+			%BUS_WIDTH = 1,
+			%NINPUTS = 2,
+			%INPUT = 'A' 'B',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 2;
+		%INPINS ( 'A' 'B' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = N;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('AND4')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B' 'C' 'D';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%AND
+			%BUS_WIDTH = 1,
+			%NINPUTS = 4,
+			%INPUT = 'A' 'B' 'C' 'D',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 4;
+		%INPINS ( 'A' 'B' 'C' 'D' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = N;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('AND8')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%AND
+			%BUS_WIDTH = 1,
+			%NINPUTS = 8,
+			%INPUT = 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 8;
+		%INPINS ( 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = N;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('OR2')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%OR
+			%BUS_WIDTH = 1,
+			%NINPUTS = 2,
+			%INPUT = 'A' 'B',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 2;
+		%INPINS ( 'A' 'B' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = N;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('NAND8')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H';
+	%OUTPUT_PINS = 'QN';
+	%EBC
+		%AND
+			%BUS_WIDTH = 1,
+			%NINPUTS = 8,
+			%INPUT = 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H',
+			%Z = !'QN';
+	%END_EBC
+	%RESOURCES
+		%AREA = 8;
+		%INPINS ( 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = I;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('OR4')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B' 'C' 'D';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%OR 
+			%BUS_WIDTH = 1,
+			%NINPUTS = 4,
+			%INPUT = 'A' 'B' 'C' 'D',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 4;
+		%INPINS ( 'A' 'B' 'C' 'D' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = N;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('NOR2')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B';
+	%OUTPUT_PINS = 'QN';
+	%EBC
+		%OR
+			%BUS_WIDTH = 1,
+			%NINPUTS = 2,
+			%INPUT = 'A' 'B',
+			%Z = !'QN';
+	%END_EBC
+	%RESOURCES
+		%AREA = 2;
+		%INPINS ( 'A' 'B' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = I;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('OR8')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%OR
+			%BUS_WIDTH = 1,
+			%NINPUTS = 8,
+			%INPUT = 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 8;
+		%INPINS ( 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = N;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('XOR2')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%XOR
+			%BUS_WIDTH = 1,
+			%NINPUTS = 2,
+			%INPUT = 'A' 'B',
+			%Z = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 2;
+		%INPINS ( 'A' 'B' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = U;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('NOR4')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'A' 'B' 'C' 'D';
+	%OUTPUT_PINS = 'QN';
+	%EBC
+		%OR
+			%BUS_WIDTH = 1,
+			%NINPUTS = 4,
+			%INPUT = 'A' 'B' 'C' 'D',
+			%Z = !'QN';
+	%END_EBC
+	%RESOURCES
+		%AREA = 4;
+		%INPINS ( 'A' 'B' 'C' 'D' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'QN' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%PROP_DELAY %RISE = 0, %FALL = 0;
+			%PHASE = I;
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
+%CELL ('DFF')
+	%LIBRARY_NAME = 'dio';
+	%LIBRARY_ALIAS = 'DIO';
+	%INPUT_PINS = 'CK' 'D';
+	%OUTPUT_PINS = 'Q';
+	%EBC
+		%DFF
+			%NBITS = 1,
+			%CLOCK = 'CK',
+			%D = 'D',
+			%Q = 'Q';
+	%END_EBC
+	%RESOURCES
+		%AREA = 10;
+		%INPINS ( 'CK' 'D' )
+			%PIN_LOAD = 0;
+			%PIN_CAPACITANCE = 0;
+		%END_INPINS
+		%OUTPINS ( 'Q' )
+			%MAX_LOAD = 0;
+			%DRIVE_SLOPE = 0 0;
+			%SOURCE_PINS ( 'CK' )
+				%PROP_DELAY %RISE = 0, %FALL = 0;
+				%PHASE = R;
+			%END_SOURCE_PINS
+		%END_OUTPINS
+	%END_RESOURCES
+%END_CELL
