@@ -1,14 +1,14 @@
 
 
                         WELCOME TO TURBO C
-                       ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                       Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     This README file contains information that will be useful and/or of
     interest to you. Please read it in its entirety, referring to it
     when you encounter problems not addressed in the Owner's Handbook.
 
     TABLE OF CONTENTS
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     1. How to get Help
     2. Corrections/Additions to the Manual
@@ -19,7 +19,7 @@
 
 
     1. HOW TO GET HELP
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     If you have any problems, please read this file and the Owner's
     Handbook first. If you still have a question and need assistance,
@@ -72,7 +72,7 @@
 
 
     2. CORRECTIONS/ADDITIONS TO THE MANUAL
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     User's Guide (Volume I)
 
@@ -174,7 +174,7 @@
 
 
     3. IMPORTANT TIPS
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     - When copying the *.H files from the Libraries and Header Files
       disk be sure to copy the SYS sub-directory and its contents.
@@ -199,10 +199,10 @@
 
 
     4. FILES ON THE DISK
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     Disk 1
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     README   COM  --  Reads this README
     TC       EXE  --  Turbo C Compiler
@@ -213,7 +213,7 @@
 
 
     Disk 2
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     TCC      EXE  --  Command line version of Turbo C Compiler
     CPP      EXE  --  Turbo C preprocessor
@@ -230,7 +230,7 @@
     MAIN     C    --  Alternative, stripped-down C main file
 
     Disk 3
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     ???????? H    --  Turbo C header files
     C0T      OBJ  --  Tiny model startup code
@@ -257,13 +257,13 @@
                       memory model
 
     SYS DIRECTORY
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
     STAT     H    --  Turbo C header file with file status/directory
                       functions
 
 
     Disk 4
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     C0C      OBJ  --  Compact model startup code
     MATHC    LIB  --  Compact model math library
@@ -286,7 +286,7 @@
 
 
     5. USING TURBO C WITH DOS 3.2 AND A FLOATING POINT COPROCESSOR
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
     DOS 3.2 has a bug in its handling of floating exceptions.  When
     an exception occurs, the system allocates a local stack for the
@@ -331,7 +331,7 @@
 
 
     6. HOW TO COMPILE MICROCALC
-    ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„Ã„
 
        In order to compile MicroCalc do the following:
 
@@ -351,5 +351,5 @@
        or HUGE) will give you much more memory for your spreadsheets.
 
 END
-ÄÄÄ
+Ã„Ã„Ã„
 

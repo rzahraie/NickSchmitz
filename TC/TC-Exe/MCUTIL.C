@@ -621,4 +621,6 @@ int getcommand(char *msgstr, char *comstr)
  clearinput();
  return(strlen(comstr) - strlen(strchr(comstr, ch)));
 } /* getcommand */
-
+
+
+

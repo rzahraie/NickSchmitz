@@ -182,4 +182,5 @@ int getcell(int *col, int *row)
  while (!good);
  return(TRUE);
 } /* getcell */
-
+
+

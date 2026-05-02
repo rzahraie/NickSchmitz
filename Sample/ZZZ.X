@@ -1,13 +1,14 @@
 
 ---------- zzz.z
 Current time is  2:14:06.08p
-Enter new time: 
+Enter new time: 
+
 * Data location: - c:\tcv3data\
 * Processing files from: - C:\D\TC\univ.txt
 
 $!!$56789a123456789b123456789c123456789d123456789e123456789f
 $c:\tcv3data\$
-Cannot open file "Ïè" - c:\tcv3data\c\c:\tcv3data\.ndx
+Cannot open file "ÃÃ¨" - c:\tcv3data\c\c:\tcv3data\.ndx
 $ABFI$
 
 $! bwtc,   0.10,   ABFI, 990413,   11.45,    910, 13.63,     3,     9167
@@ -1254,7 +1255,7 @@ $! sell,   0.41,   CDCO, 991101,   11.06,    900, 12.08,  2151,$p1, 4,   912
 $!$  jh,   CDCO,      3,     15,    2151,    717,   143,   5.0,   4.0, 64400
 
 $CGE$
-Cannot open file "Ïè" - c:\tcv3data\C\CGE.ndx
+Cannot open file "ÃÃ¨" - c:\tcv3data\C\CGE.ndx
 $CGGI$
 
 $! bwtc,   0.10,   CGGI, 981014,    9.00,   1170,  8.57,     4,     7400
@@ -5859,7 +5860,7 @@ $! sell,   0.16,   OXGN, 991217,   19.63,    500, 16.50,  -479,$p0, 2, -1565
 $!$  jh,   OXGN,      7,     26,    -479,    -68,   -18,   3.7,  13.7, 57800
 
 $PERI$
-Cannot open file "Ïè" - c:\tcv3data\P\PERI.ndx
+Cannot open file "ÃÃ¨" - c:\tcv3data\P\PERI.ndx
 $PGNX$
 
 $! bwtc,   0.10,   PGNX, 981015,    9.99,   1030, 10.44,     5,     6300
@@ -7634,7 +7635,7 @@ $! sell,   1.43,   TMAX, 991022,    8.00,   1250,  7.49,  3655,$p0, 4,  -633
 $!$  jh,   TMAX,      3,     22,    3655,   1218,   166,   7.3,   4.5, 91800
 
 $TNI$
-Cannot open file "Ïè" - c:\tcv3data\T\TNI.ndx
+Cannot open file "ÃÃ¨" - c:\tcv3data\T\TNI.ndx
 $TODDA$
 
 $! bwtc,   0.10,  TODDA, 981021,    6.33,   1590,  6.63,     6,     4100
@@ -7946,7 +7947,7 @@ $! sell,   0.53,    UGS, 990901,   28.54,    350, 33.23,  5851,$p1, 8,  1642
 $!$  jh,    UGS,      8,     53,    5851,    731,   110,   6.6,  21.3, 11000
 
 $ULB$
-Cannot open file "Ïè" - c:\tcv3data\U\ULB.ndx
+Cannot open file "ÃÃ¨" - c:\tcv3data\U\ULB.ndx
 $ULTE$
 
 $! bwtc,   0.10,   ULTE, 981120,    5.15,   2170,  5.19,     3,     6734
@@ -8474,7 +8475,7 @@ $! sell,   2.07,    WON, 990624,   36.10,    270, 36.53,  4255,$p1,13,   114
 $!$  jh,    WON,      2,     26,    4255,   2127,   164,  13.0,  38.8, 224500
 
 $XMCM$
-Cannot open file "Ïè" - c:\tcv3data\X\XMCM.ndx
+Cannot open file "ÃÃ¨" - c:\tcv3data\X\XMCM.ndx
 $XTND$
 
 $! bwtc,   0.10,   XTND, 990331,    4.69,   2280,  4.91,     4,     3200
@@ -8645,4 +8646,5 @@ Day Histogram:
 !!    >    16d,    49,
 
 Current time is  2:14:09.22p
-Enter new time: 
+Enter new time: 
+

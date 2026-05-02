@@ -13,7 +13,7 @@ echo if exist zzz.s del zzz.s >>zzz.z
 echo @@>>zzz.z
 dbf \tc2000\watch\%1.dbf | xlnx >>zzz.z
 echo @@>>zzz.z
-echo find "*r*" zzz.r @¼ find "$" @¼ sort/+7 @~zzz.s >>zzz.z
+echo find "*r*" zzz.r @Â¼ find "$" @Â¼ sort/+7 @~zzz.s >>zzz.z
 echo type zzz.s >>zzz.z
 @
 czfix <zzz.z >zzz.bat
