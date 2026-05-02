@@ -9,8 +9,8 @@ find/c "#" zzz.bat
 @
 echo echo @e1 # @~@~z-z.doc >zzz.eds
 echo echo @e1 ... >>zzz.eds
-echo dir/s @e1 @¼ tail @¼ find "(" @~zzz.tmp>>zzz.eds
-echo edlin zzz.tmp @@@¼zzz.obk @~nul >>zzz.eds
+echo dir/s @e1 @?? tail @?? find "(" @~zzz.tmp>>zzz.eds
+echo edlin zzz.tmp @@@??zzz.obk @~nul >>zzz.eds
 echo type zzz.tmp @~@~z-z.doc >>zzz.eds
 @
 czfix <zzz.eds >zzz.obl
